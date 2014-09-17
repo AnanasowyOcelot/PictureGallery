@@ -1,0 +1,36 @@
+{% extends 'VendorGalleryBundle::layout.html.twig' %}
+
+
+{% block title %}Gallery
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="portfolio container">
+        <div class="portfolio-title">
+            <h3>Obrazki</h3>
+        </div>
+
+        {% for image in images %}
+            <div class="work span3">
+                Ocena: {{ image.getVotes() }}
+                <a href="{{ path('vendor_gallery_details', {'id':image.getId()}) }}">
+                    <img src="{{ image.getPath() }}" alt="" style="height:200px; width: 250px">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+    </div>
+    <div class="portfolio container">
+    </div>
+
+{% endblock %}
+
+
+
+
+
+
+

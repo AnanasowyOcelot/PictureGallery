@@ -1,0 +1,27 @@
+
+services:
+    vendor_gallery.image_repository:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method:  getRepository
+        arguments:
+            - "Vendor\GalleryBundle\Entity\Img"
+    vendor_gallery.votes_repository:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method:  getRepository
+        arguments:
+            - "Vendor\GalleryBundle\Entity\ImgVote"
+    vendor_galery.image_service:
+        class: Vendor\GalleryBundle\Service\Image
+        arguments:
+            - "@vendor_gallery.image_repository"
+            - "@security.context"
+            - "@vendor_gallery.votes_repository"
+    gedmo.listener.timestampable:
+        class: Gedmo\Timestampable\TimestampableListener
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }
+        calls:
+            - [ setAnnotationReader, [ @annotation_reader ] ]
+

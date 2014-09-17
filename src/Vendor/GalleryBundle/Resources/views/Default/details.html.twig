@@ -1,0 +1,34 @@
+{% extends 'VendorGalleryBundle::layout.html.twig' %}
+
+{% block title %}Details{% endblock %}
+
+{% block content %}
+    {#<div style="width: 50%; margin: auto">#}
+        <table class="table table-striped">
+
+            <tr>
+                <td style="text-align:center;white-space:nowrap">Tytuł: {{ image.getTitle()|e }}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;white-space:nowrap">Dodano przez: {{ image.getCreatedBy() |e }}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;white-space:nowrap">Ocena: {{ image.Votes() |e }}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;white-space:nowrap"><img src="{{ image.getPath() }}" alt=""></td>
+            </tr>
+
+
+        </table>
+    {% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': image.getId()} %}
+
+    {#</div>#}
+{% endblock %}
+
+
+
+
+
+
+

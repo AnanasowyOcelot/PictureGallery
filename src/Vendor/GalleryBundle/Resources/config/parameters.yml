@@ -1,0 +1,3 @@
+parameters:
+    upload_dir: %kernel.root_dir%/../web/uploads
+    knp.doctrine_behaviors.blameable_listener.user_entity: AppBundle\Entity\User

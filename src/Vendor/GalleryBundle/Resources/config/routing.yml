@@ -1,0 +1,12 @@
+vendor_gallery_homepage:
+    path:     /
+    defaults: { _controller: VendorGalleryBundle:Default:index }
+vendor_gallery_upload:
+    path:     /upload/
+    defaults: { _controller: VendorGalleryBundle:Default:upload }
+vendor_gallery_details:
+    path:     /details/{id}
+    defaults: { _controller: VendorGalleryBundle:Default:details }
+vendor_gallery_user_pictures:
+    path:     /mypictures/{userId}
+    defaults: { _controller: VendorGalleryBundle:Default:myImages }
