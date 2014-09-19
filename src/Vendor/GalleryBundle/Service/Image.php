@@ -2,10 +2,12 @@
 
 namespace Vendor\GalleryBundle\Service;
 
+use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Uploadable\Fixture\Entity\File;
+use Symfony\Component\HttpFoundation\Request;
 use Vendor\GalleryBundle\Entity\Img;
 use Vendor\GalleryBundle\Entity\ImgThumbnail;
+use Vendor\GalleryBundle\Exception\FileUploadException;
 use Vendor\GalleryBundle\ViewModel\Image as ViewModel;
 use Doctrine\Common\Persistence\ObjectRepository;
 use Symfony\Component\Security\Core\SecurityContextInterface;
@@ -27,142 +29,161 @@ class Image
      */
     private $voteRepository;
 
-    function __construct(ObjectRepository $repository, SecurityContextInterface $securityContext, ObjectRepository $voteRepo)
+    /**
+     * @var \Doctrine\Common\Persistence\ObjectManager
+     */
+    private $objectManager;
+
+    function __construct(
+        ObjectRepository $repository,
+        SecurityContextInterface $securityContext,
+        ObjectRepository $voteRepo,
+        ObjectManager $om
+    )
     {
         $this->imgRepository = $repository;
         $this->securityContext = $securityContext;
         $this->voteRepository = $voteRepo;
+        $this->objectManager = $om;
     }
 
     public function getImagesList()
     {
         $imageViewModels = array();
         if ($this->securityContext->isGranted('IS_AUTHENTICATED_FULLY')) {
-
-
             $images = $this->imgRepository->findAll();
             foreach ($images as $image) {
-
-                $votes = $this->getVotesForImage($image);
-
-                /** @var $image \Vendor\GalleryBundle\Entity\Img */
-                $imageViewModels[] = new ViewModel(
-                    $image->getId(),
-                    $image->getPath(200, 200),
-                    $votes);
+                $imageViewModels[] = $this->createViewModel($image, 200, 200);
             }
         }
         return $imageViewModels;
     }
 
+    /**
+     * @param Img $image
+     * @param int $width
+     * @param int $height
+     * @return ViewModel
+     */
+    private function createViewModel(Img $image, $width = 0, $height = 0)
+    {
+        $vm = new ViewModel(
+            $image->getId(),
+            $image->getPath($width, $height),
+            $this->getVotesForImage($image)
+        );
+        $vm->setTitle($image->getTitle());
+        $vm->setCreatedBy(($image->getCreatedBy()));
+        return $vm;
+    }
+
     public function getImageById($id)
     {
-
         /** @var $image \Vendor\GalleryBundle\Entity\Img */
-        $image = $this->imgRepository->findOneBy(array('id' => $id));
-        $votes = $this->getVotesForImage($image);
-
-        $imageViewModel = new ViewModel(
-            $image->getId(),
-            $image->getPath(),
-            $votes);
-        $imageViewModel->setTitle($image->getTitle());
-        $imageViewModel->setCreatedBy(($image->getCreatedBy()));
-
-
+        $image = $this->imgRepository->find($id);
+        $imageViewModel = $this->createViewModel($image);
         return $imageViewModel;
     }
 
     public function getImagesByUserId($userId)
     {
-
         $images = $this->imgRepository->findBy(array('createdBy' => $userId));
-
         $imageViewModels = array();
         foreach ($images as $image) {
-            $votes = $this->getVotesForImage($image);
-            /**
-             * @var $image Img
-             */
-            $imageViewModel = new ViewModel(
-                $image->getId(),
-                $image->getPath(200, 200),
-                $votes);
-            $imageViewModel->setTitle($image->getTitle());
-
-            $imageViewModels[] = $imageViewModel;
+            $imageViewModels[] = $this->createViewModel($image, 200, 200);
         }
-
         return $imageViewModels;
-
     }
 
-    private function getVotesForImage(Img $image)
+    public function getVotesForImage(Img $image)
     {
         $votes = $this->voteRepository->findBy(array("img" => $image));
         $votesSum = 0;
         foreach ($votes as $vote) {
+            /** @var \Vendor\GalleryBundle\Entity\ImgVote $vote */
             $votesSum += $vote->getValue();
         }
         return $votesSum;
     }
 
+    /**
+     * @param UploadedFile $file
+     * @return string
+     * @throws \Vendor\GalleryBundle\Exception\FileUploadException
+     */
     public function uploadPictureAndReturnUrl(UploadedFile $file)
     {
-
-        $fileName = $file->getClientOriginalName();
-        $fileSize = $file->getClientSize();
-        $fileType = $file->getClientMimeType();
-        $fileError = $file->getError();
-        $fileTmpName = $file->getRealPath();
-        $webPath = 'images/';
-
         $allowedExts = array("gif", "jpeg", "jpg", "png");
         $allowedTypes = array("image/gif", "image/jpeg", "image/pjpeg", "image/x-png", "image/png");
         $maxFileSize = 200000;
-        $imgDirPath = __DIR__ . '/../../../../web/bundles/vendorgallery/images/';
 
+        $validationErrors = array();
 
-        $temp = explode(".", $fileName);
-        $extension = end($temp);
-
-        $filePath = $imgDirPath . $fileName;
-
-        if (in_array($fileType, $allowedTypes)
-            && in_array($extension, $allowedExts)
-            && ($fileSize < $maxFileSize)
-        ) {
-            if ($fileError > 0) {
-                echo "Return Code: " . $fileError . "<br>";
-            } else {
-                move_uploaded_file($fileTmpName,
-                    $filePath);
-
-            }
-        } else {
-            echo "Invalid file";
+        if (!$file->isValid()) {
+            $validationErrors[] = "Return Code: " . $file->getError();
         }
 
+        if (!in_array($file->getClientMimeType(), $allowedTypes)) {
+            $validationErrors[] = 'Invalid file type.';
+        }
 
-        return $webPath . $fileName;
+        $temp = explode(".", $file->getClientOriginalName());
+        $extension = end($temp);
+        if (!in_array($extension, $allowedExts)) {
+            $validationErrors[] = 'Invalid extension';
+        }
+
+        if ($file->getClientSize() > $maxFileSize) {
+            $validationErrors[] = 'File too big (' . $file->getClientSize() . '). Max file size: ' . $maxFileSize;
+        }
+
+        if (count($validationErrors) > 0) {
+            throw new FileUploadException(implode('\n', $validationErrors));
+        }
+
+        $imgDirPath = $this->getBaseWebPath() . $this->getBundleWebPath();
+        $filePath = $imgDirPath . $file->getClientOriginalName();
+        move_uploaded_file($file->getRealPath(), $filePath);
+
+        return 'images/' . $file->getClientOriginalName();
     }
 
-    public function createThumbnail($img, $newHeight, $newWidth)
+    public function uploadAndCreateThumbnail(Request $request)
     {
-        $imgPath = $img->getPath();
-        $fullPath = __DIR__ . '/../../../../web' . $imgPath;
-        var_dump($fullPath);
+        /** @var $file \Symfony\Component\HttpFoundation\File\UploadedFile */
+        $file = $request->files->get('file0');
+        $img = new Img();
+
+        $img->setTitle($request->request->get('title'));
+
+        $path = $this->uploadPictureAndReturnUrl($file);
+        $img->setPath($path);
+
+        $img->setFileName($file->getClientOriginalName());
+
+        $thumbNail = $this->createThumbnail($img, 200, 200);
+        $img->setThumbnails(array($thumbNail));
+
+        $this->objectManager->persist($img);
+        $this->objectManager->flush();
+
+        return $img;
+    }
+
+    private function createThumbnail(Img $img, $newHeight, $newWidth)
+    {
+        $tmpImgPath = $img->getPath();
+        $fullPath = $this->getBaseWebPath() . $tmpImgPath;
         $image = $this->imageCreateFromFile($fullPath);
 
-//        echo($image);
         $newImage = imagecreatetruecolor($newWidth, $newHeight);
-        $imgPath = __DIR__ . '/../../../../web/bundles/vendorgallery/images/' . $newHeight . 'x' . $newWidth . $img->getFileName();
-        $webPath = '/bundles/vendorgallery/images/' . $newHeight . 'x' . $newWidth . $img->getFileName();
+        $bundlePath = $this->getBaseWebPath() . $this->getBundleWebPath();
+        $thumbnailName = $newHeight . 'x' . $newWidth . $img->getFileName();
+        $serverPath = $bundlePath . $thumbnailName;
+        $webPath = $this->getBundleWebPath() . $thumbnailName;
 
-        var_dump($image);
-
-        $this->scale_image($image, $newImage);
-        imagejpeg($newImage, $imgPath);
+        $this->scaleImage($image, $newImage);
+        imagejpeg($newImage, $serverPath);
 
         $thumbnail = new ImgThumbnail();
         $thumbnail->setImage($img);
@@ -173,17 +194,19 @@ class Image
         return $thumbnail;
     }
 
-    function imageCreateFromFile($path)
+    private function imageCreateFromFile($path)
     {
         $info = @getimagesize($path);
         if (!$info) {
             return false;
         }
-        $functions = array(IMAGETYPE_GIF => 'imagecreatefromgif',
+        $functions = array(
+            IMAGETYPE_GIF => 'imagecreatefromgif',
             IMAGETYPE_JPEG => 'imagecreatefromjpeg',
             IMAGETYPE_PNG => 'imagecreatefrompng',
             IMAGETYPE_WBMP => 'imagecreatefromwbmp',
-            IMAGETYPE_XBM => 'imagecreatefromwxbm',);
+            IMAGETYPE_XBM => 'imagecreatefromwxbm'
+        );
         if (!$functions[$info[2]]) {
             return false;
         }
@@ -193,9 +216,8 @@ class Image
         return $functions[$info[2]]($path);
     }
 
-    function scale_image($src_image, $dst_image, $op = 'fit')
+    private function scaleImage($src_image, $dst_image, $op = 'fit')
     {
-
         $src_width = imagesx($src_image);
         $src_height = imagesy($src_image);
 
@@ -209,10 +231,11 @@ class Image
         $new_y = round(($dst_height - $new_height) / 2);
 
         // FILL and FIT mode are mutually exclusive
-        if ($op == 'fill')
+        if ($op == 'fill') {
             $next = $new_height < $dst_height;
-        else
+        } else {
             $next = $new_height > $dst_height;
+        }
 
         // If match by width failed and destination image does not fit, try by height
         if ($next) {
@@ -223,22 +246,22 @@ class Image
         }
 
         // Copy image on right place
-        imagecopyresampled($dst_image, $src_image, $new_x, $new_y, 0, 0, $new_width, $new_height, $src_width, $src_height);
+        imagecopyresampled(
+            $dst_image, $src_image,
+            $new_x, $new_y,
+            0, 0,
+            $new_width, $new_height,
+            $src_width, $src_height
+        );
     }
 
-    protected
-    function getUploadRootDir()
+    private function getBaseWebPath()
     {
-        // the absolute directory path where uploaded
-        // documents should be saved
-        return __DIR__ . '/../../../../web/' . $this->getUploadDir();
+        return __DIR__ . '/../../../../web';
     }
 
-    protected
-    function getUploadDir()
+    private function getBundleWebPath()
     {
-        // get rid of the __DIR__ so it doesn't screw up
-        // when displaying uploaded doc/image in the view.
-        return 'images';
+        return '/bundles/vendorgallery/images/';
     }
-} 
+}

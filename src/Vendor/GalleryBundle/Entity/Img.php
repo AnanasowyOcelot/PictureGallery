@@ -138,6 +138,10 @@ class Img
         $this->thumbnails[] = $thumbnail;
     }
 
+    public function addVote(ImgVote $vote){
+        $this->votes[] = $vote;
+    }
+
     /**
      * @param $width
      * @param $height

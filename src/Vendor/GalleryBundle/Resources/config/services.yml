@@ -18,6 +18,7 @@ services:
             - "@vendor_gallery.image_repository"
             - "@security.context"
             - "@vendor_gallery.votes_repository"
+            - "@doctrine.orm.entity_manager"
     gedmo.listener.timestampable:
         class: Gedmo\Timestampable\TimestampableListener
         tags:

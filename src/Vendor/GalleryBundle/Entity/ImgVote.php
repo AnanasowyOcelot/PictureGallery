@@ -67,4 +67,18 @@ class ImgVote
         return $this->value;
     }
 
+    public function addValue(){
+        $this->value += 1;
+    }
+
+    /**
+     * @param \Vendor\GalleryBundle\Entity\Img $img
+     */
+    public function setImg($img)
+    {
+        $this->img = $img;
+    }
+
+
+
 }

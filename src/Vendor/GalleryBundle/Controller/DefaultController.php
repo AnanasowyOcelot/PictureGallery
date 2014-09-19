@@ -5,106 +5,75 @@ namespace Vendor\GalleryBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Vendor\GalleryBundle\Entity\Img;
+use Vendor\GalleryBundle\Exception\FileUploadException;
 
 class DefaultController extends Controller
 {
     public function indexAction()
     {
-        /**
-         * @var $imgService \Vendor\GalleryBundle\Service\Image
-         */
-        $imgService = $this->get('vendor_galery.image_service');
-        $images = $imgService->getImagesList();
+        $images = $this->getImageService()->getImagesList();
 
-        return $this->render('VendorGalleryBundle:Default:index.html.twig',
-            array(
-                'messages' => array(),
-                'images' => $images
-            ));
+        return $this->render('VendorGalleryBundle:Default:index.html.twig', array(
+            'messages' => array(),
+            'images' => $images
+        ));
     }
 
-    // TODO: przepisać resztę metod do serwisów i na viewModele
     public function uploadAction()
     {
-        /**
-         * @var $request Request
-         */
+        /** @var $request Request */
         $request = $this->get('request');
-        $post = $request->request->all();
+
+        /** @var $user \Vendor\GalleryBundle\Entity\User */
+        $user = $this->get('security.context')->getToken()->getUser();
+        $userName = $user->getUsername();
+
+        $data = $request->request->all();
+
+        if (!$request->isMethod("post")) {
+            return $this->renderUploadTemplate(new Img());
+        }
+
+        if (!$data['title']) {
+            return $this->renderUploadTemplate(
+                new Img(),
+                array('info' => 'Uzupełnij tytuł użytkowniku ' . $userName)
+            );
+        }
+
         $file = $request->files->get('file0');
-
-         /**
-         * @var $em \Doctrine\ORM\EntityManager
-         */
-        $em = $this->get('doctrine')->getManager();
-
-
-        if (empty($post)) {
+        if (!$file->getClientOriginalName()) {
             $img = new Img();
+            $img->setTitle($data['title']);
+            return $this->renderUploadTemplate(
+                $img,
+                array('info' => 'Uzupełnij zdjęcie użytkowniku ' . $userName)
+            );
+        }
 
-
-            return $this->render('VendorGalleryBundle:Default:upload.html.twig', array(
-                "entity" => $img,
-                'messages' => array()
-            ));
-
-        } else {
-            $fileName = $file->getClientOriginalName();
-
-            if (empty($post['title'])) {
-                /**
-                 * @var $user \Vendor\GalleryBundle\Entity\User
-                 */
-                $user = $this->get('security.context')->getToken()->getUser();
-                $userName = $user->getUsername();
-
-                $img = new Img();
-                return $this->render('VendorGalleryBundle:Default:upload.html.twig', array(
-                    "entity" => $img,
-                    'messages' => array('info' => 'Uzupełnij tytuł panie ' . $userName)
-                ));
-
-            } elseif (!$fileName) {
-//                var_dump($_FILES);
-//                die();
-                $user = $this->get('security.context')->getToken()->getUser();
-                $userName = $user->getUsername();
-
-                $img = new Img();
-                $img->setTitle($post['title']);
-                return $this->render('VendorGalleryBundle:Default:upload.html.twig', array(
-                    "entity" => $img,
-                    'messages' => array('info' => 'Uzupełnij zdjęcie panie ' . $userName)
-                ));
-            }
-
-            $img = new Img();
-            $img->setTitle($post['title']);
-
-            $imgService = $this->get('vendor_galery.image_service');
-            $path = $imgService->uploadPictureAndReturnUrl($file);
-            $img->setPath($path);
-
-            $img->setFileName($fileName);
-            $thumbNail = $imgService->createThumbnail($img, 200, 200);
-
-            $img->setThumbnails(array($thumbNail));
-
-            //TODO jeśli pole będzie puste!
-            $em->persist($img);
-            $em->flush();
+        try {
+            $this->getImageService()->uploadAndCreateThumbnail($request);
 
             return $this->redirect($this->generateUrl('vendor_gallery_homepage'));
+        } catch (FileUploadException $e) {
+            return $this->renderUploadTemplate(
+                new Img(),
+                array('errors' => $e->getMessage())
+            );
         }
+    }
+
+    private function renderUploadTemplate(Img $img, array $messages = array())
+    {
+        return $this->render('VendorGalleryBundle:Default:upload.html.twig', array(
+            "entity" => $img,
+            'messages' => $messages
+        ));
     }
 
     public function detailsAction($id)
     {
-        /**
-         * @var $imgService \Vendor\GalleryBundle\Service\Image
-         */
-        $imgService = $this->get('vendor_galery.image_service');
-        $image = $imgService->getImageById($id);
+        $image = $this->getImageService()->getImageById($id);
 
         return $this->render('VendorGalleryBundle:Default:details.html.twig', array(
             'image' => $image,
@@ -115,11 +84,7 @@ class DefaultController extends Controller
 
     public function myImagesAction($userId)
     {
-        /**
-         * @var $imgService \Vendor\GalleryBundle\Service\Image
-         */
-        $imgService = $this->get('vendor_galery.image_service');
-        $images = $imgService->getImagesByUserId($userId);
+        $images = $this->getImageService()->getImagesByUserId($userId);
 
         return $this->render('VendorGalleryBundle:Default:myimages.html.twig', array(
             'images' => $images,
@@ -127,4 +92,11 @@ class DefaultController extends Controller
         ));
     }
 
+    /**
+     * @return \Vendor\GalleryBundle\Service\Image
+     */
+    private function getImageService()
+    {
+        return $this->get('vendor_galery.image_service');
+    }
 }

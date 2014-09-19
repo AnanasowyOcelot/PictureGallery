@@ -10,3 +10,6 @@ vendor_gallery_details:
 vendor_gallery_user_pictures:
     path:     /mypictures/{userId}
     defaults: { _controller: VendorGalleryBundle:Default:myImages }
+vendor_gallery_vote_add:
+    path:     /vote/add/
+    defaults: { _controller: VendorGalleryBundle:Vote:add }

@@ -14,7 +14,18 @@
 
         {% for image in images %}
             <div class="work span3">
-                Ocena: {{ image.getVotes() }}
+                <div class="vote{{ image.getId }}">Ocena: {{ image.getVotes() }}</div>
+                <a class="addVote{{ image.getId }}">+</a>
+                <script>
+                    jQuery(".addVote{{ image.getId }}").click(function(){
+                        jQuery.post("{{ path('vendor_gallery_vote_add') }}", {
+                            id: {{ image.getId() }}
+                        }, function (data) {
+                            $(".vote{{ image.getId}}").html(data);
+                            console.log(data);
+                        }, "json");
+                    })
+                 </script>
                 <a href="{{ path('vendor_gallery_details', {'id':image.getId()}) }}">
                     <img src="{{ image.getPath() }}" alt="" style="height:200px; width: 250px">
                 </a>
@@ -25,6 +36,7 @@
     </div>
     <div class="portfolio container">
     </div>
+
 
 {% endblock %}
 
