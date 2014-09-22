@@ -14,18 +14,28 @@
 
         {% for image in images %}
             <div class="work span3">
+                <div><a class="addVote{{ image.getId }}" style="font-size: 20px"> + </a><a class="addMinusVote{{ image.getId }}" style="font-size: 20px"> - </a></div>
                 <div class="vote{{ image.getId }}">Ocena: {{ image.getVotes() }}</div>
-                <a class="addVote{{ image.getId }}">+</a>
                 <script>
-                    jQuery(".addVote{{ image.getId }}").click(function(){
+                    jQuery(".addVote{{ image.getId }}").click(function () {
                         jQuery.post("{{ path('vendor_gallery_vote_add') }}", {
-                            id: {{ image.getId() }}
+                            id: {{ image.getId() }},
+                            value: 1
                         }, function (data) {
-                            $(".vote{{ image.getId}}").html(data);
+                            $(".vote{{ image.getId}}").html("Ocena: "+data['numberVotes']);
+                            console.log(data);
+                        }, "json");
+                    });
+                    jQuery(".addMinusVote{{ image.getId }}").click(function () {
+                        jQuery.post("{{ path('vendor_gallery_vote_add') }}", {
+                            id: {{ image.getId() }},
+                            value: -1
+                        }, function (data) {
+                            $(".vote{{ image.getId}}").html("Ocena: "+data['numberVotes']);
                             console.log(data);
                         }, "json");
                     })
-                 </script>
+                </script>
                 <a href="{{ path('vendor_gallery_details', {'id':image.getId()}) }}">
                     <img src="{{ image.getPath() }}" alt="" style="height:200px; width: 250px">
                 </a>

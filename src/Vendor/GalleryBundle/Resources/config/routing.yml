@@ -12,4 +12,4 @@ vendor_gallery_user_pictures:
     defaults: { _controller: VendorGalleryBundle:Default:myImages }
 vendor_gallery_vote_add:
     path:     /vote/add/
-    defaults: { _controller: VendorGalleryBundle:Vote:add }
+    defaults: { _controller: VendorGalleryBundle:Vote:vote }

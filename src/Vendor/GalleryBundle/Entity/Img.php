@@ -30,7 +30,7 @@ class Img
 
 
     /**
-     * @var datetime $created
+     * @var /datetime $created
      *
      * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime")
@@ -38,7 +38,7 @@ class Img
     private $created;
 
     /**
-     * @var datetime $updated
+     * @var /datetime $updated
      *
      * @Gedmo\Timestampable(on="update")
      * @ORM\Column(type="datetime")
@@ -121,6 +121,10 @@ class Img
         } else {
             return '/bundles/vendorgallery/' . $this->path;
         }
+    }
+
+    public function getOriginalPath(){
+        return $this->path;
     }
 
 

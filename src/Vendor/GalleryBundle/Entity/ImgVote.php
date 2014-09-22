@@ -67,8 +67,8 @@ class ImgVote
         return $this->value;
     }
 
-    public function addValue(){
-        $this->value += 1;
+    public function addValue($value){
+        $this->value += $value;
     }
 
     /**
