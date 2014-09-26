@@ -7,14 +7,47 @@
 
 
 {% block content %}
+
     <div class="portfolio container">
+        <form name="input" action="{{ path('vendor_gallery_search') }}" method="post">
+            <input type="text" name="search" value="{{ searchParams.getSearch() }}"><input type="submit" value="Szukaj">
+            <br/>
+            Sortowanie
+            <br/>
+            {% if searchParams.getSortBy() == 'title' %}
+                Po tytule<input type="radio" name="sortBy" value="title" checked="checked">
+            {% else %}
+                Po tytule<input type="radio" name="sortBy" value="title">
+            {% endif %}
+
+            {% if searchParams.getSortBy() == 'VotesSum' %}
+                Po ocenie<input type="radio" name="sortBy" value="VotesSum" checked="checked">
+            {% else %}
+                Po ocenie<input type="radio" name="sortBy" value="VotesSum">
+            {% endif %}
+            <br/>
+
+            {% if searchParams.getSortType() == 'ASC' %}
+                Rosnąco<input type="radio" name="sortType" value="ASC" checked="checked">
+            {% else %}
+                Rosnąco<input type="radio" name="sortType" value="title">
+            {% endif %}
+
+            {% if searchParams.getSortType() == 'DESC' %}
+                Malejąco<input type="radio" name="sortType" value="DESC" checked="checked">
+            {% else %}
+                Malejąco<input type="radio" name="sortType" value="DESC">
+            {% endif %}
+
+        </form>
         <div class="portfolio-title">
             <h3>Obrazki</h3>
         </div>
 
         {% for image in images %}
             <div class="work span3">
-                <div><a class="addVote{{ image.getId }}" style="font-size: 20px"> + </a><a class="addMinusVote{{ image.getId }}" style="font-size: 20px"> - </a></div>
+                <div><a class="addVote{{ image.getId }}" style="font-size: 20px"> + </a><a
+                            class="addMinusVote{{ image.getId }}" style="font-size: 20px"> - </a></div>
                 <div class="vote{{ image.getId }}">Ocena: {{ image.getVotes() }}</div>
                 <script>
                     jQuery(".addVote{{ image.getId }}").click(function () {
@@ -22,7 +55,7 @@
                             id: {{ image.getId() }},
                             value: 1
                         }, function (data) {
-                            $(".vote{{ image.getId}}").html("Ocena: "+data['numberVotes']);
+                            $(".vote{{ image.getId}}").html("Ocena: " + data['numberVotes']);
                             console.log(data);
                         }, "json");
                     });
@@ -31,7 +64,7 @@
                             id: {{ image.getId() }},
                             value: -1
                         }, function (data) {
-                            $(".vote{{ image.getId}}").html("Ocena: "+data['numberVotes']);
+                            $(".vote{{ image.getId}}").html("Ocena: " + data['numberVotes']);
                             console.log(data);
                         }, "json");
                     })
@@ -45,6 +78,7 @@
 
     </div>
     <div class="portfolio container">
+        {{ pagination | raw }}
     </div>
 
 

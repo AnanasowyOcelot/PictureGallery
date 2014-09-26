@@ -1,6 +1,6 @@
-vendor_gallery_homepage:
-    path:     /
-    defaults: { _controller: VendorGalleryBundle:Default:index }
+vendor_gallery_search:
+    path:     /search/
+    defaults: { _controller: VendorGalleryBundle:Default:search }
 vendor_gallery_upload:
     path:     /upload/
     defaults: { _controller: VendorGalleryBundle:Default:upload }
@@ -13,3 +13,9 @@ vendor_gallery_user_pictures:
 vendor_gallery_vote_add:
     path:     /vote/add/
     defaults: { _controller: VendorGalleryBundle:Vote:vote }
+vendor_gallery_list:
+    path:     /s/{params}/
+    defaults: { _controller: VendorGalleryBundle:Default:index}
+vendor_gallery_homepage:
+    path:     /
+    defaults: { _controller: VendorGalleryBundle:Default:index }

@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * @ORM\Entity @ORM\Table(name="images")
+ * @ORM\Entity(repositoryClass="Vendor\GalleryBundle\Repository\ImgRepository")
  **/
 class Img
 {
@@ -96,10 +97,24 @@ class Img
     protected $thumbnails;
 
     /**
-     * @ORM\OneToMany(targetEntity="ImgVote", mappedBy="image", cascade={"all"})
+     * @ORM\OneToMany(targetEntity="ImgVote", mappedBy="img", cascade={"all"})
      * @var ImgVote[]
      **/
     protected $votes;
+
+    /**
+     * @ORM\OneToOne(targetEntity="VotesSum", mappedBy="image", cascade={"all"})
+     * @var VotesSum
+     **/
+    protected $votesSum;
+
+    /**
+     * @return int
+     */
+    public function getVotesSum()
+    {
+        return $this->votesSum->getValue();
+    }
 
     /**
      * @param mixed $path

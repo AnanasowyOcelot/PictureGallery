@@ -6,16 +6,42 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Vendor\GalleryBundle\Entity\Img;
 use Vendor\GalleryBundle\Exception\FileUploadException;
+use Vendor\GalleryBundle\Model\ListParams;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
+    public function searchAction()
     {
-        $images = $this->getImageService()->getImagesList();
+
+        /** @var $request Request */
+        $request = $this->get('request');
+        $data = $request->request->all();
+
+        $listParameters = new ListParams($data);
+
+
+        $url = $this->generateUrl('vendor_gallery_list', array('params' => $listParameters->toUrlString()));
+
+        return $this->redirect($url);
+
+    }
+
+    public function indexAction($params = null)
+    {
+
+        $listParams = ListParams::fromString($params);
+
+        $count = $this->getImageService()->countImagesList($listParams->getSearch());
+        $images = $this->getImageService()->getImagesList($listParams);
+
+        $pageCount = $this->getPaginationService()->getPageCount($count, $listParams->getPerPage());
+        $paginationHtml = $this->getPaginationService()->createPagination($pageCount, $listParams->getPage(), $listParams);
 
         return $this->render('VendorGalleryBundle:Default:index.html.twig', array(
             'messages' => array(),
-            'images' => $images
+            'images' => $images,
+            'pagination' => $paginationHtml,
+            'searchParams' => $listParams
         ));
     }
 
@@ -98,5 +124,13 @@ class DefaultController extends Controller
     private function getImageService()
     {
         return $this->get('vendor_galery.image_service');
+    }
+
+    /**
+     * @return \Vendor\GalleryBundle\Service\Pagination
+     */
+    private function getPaginationService()
+    {
+        return $this->get("vendor_galery.pagination_service");
     }
 }

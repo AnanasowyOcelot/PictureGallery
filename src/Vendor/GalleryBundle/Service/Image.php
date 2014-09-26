@@ -3,11 +3,14 @@
 namespace Vendor\GalleryBundle\Service;
 
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Vendor\GalleryBundle\Entity\Img;
 use Vendor\GalleryBundle\Entity\ImgThumbnail;
+use Vendor\GalleryBundle\Entity\VotesSum;
 use Vendor\GalleryBundle\Exception\FileUploadException;
+use Vendor\GalleryBundle\Model\ListParams;
 use Vendor\GalleryBundle\ViewModel\Image as ViewModel;
 use Doctrine\Common\Persistence\ObjectRepository;
 use Symfony\Component\Security\Core\SecurityContextInterface;
@@ -15,7 +18,7 @@ use Symfony\Component\Security\Core\SecurityContextInterface;
 class Image
 {
     /**
-     * @var \Doctrine\ORM\EntityRepository
+     * @var \Vendor\GalleryBundle\Repository\ImgRepository
      */
     private $imgRepository;
 
@@ -30,7 +33,7 @@ class Image
     private $voteRepository;
 
     /**
-     * @var \Doctrine\Common\Persistence\ObjectManager
+     * @var \Doctrine\ORM\EntityManager
      */
     private $objectManager;
 
@@ -47,16 +50,36 @@ class Image
         $this->objectManager = $om;
     }
 
-    public function getImagesList()
+
+    public function updateVotesSum($votesNumber, Img $image)
+    {
+
+        $votesSum = $this->objectManager->getRepository('VendorGalleryBundle:VotesSum')->findOneBy(array("image" => $image->getId()));
+        if ($votesSum == null) {
+            $votesSum = new VotesSum();
+        }
+        $votesSum->setValue($votesNumber);
+        $votesSum->setImage($image);
+
+        $this->objectManager->persist($votesSum);
+        $this->objectManager->flush();
+    }
+
+    public function getImagesList(ListParams $listParams)
     {
         $imageViewModels = array();
         if ($this->securityContext->isGranted('IS_AUTHENTICATED_FULLY')) {
-            $images = $this->imgRepository->findAll();
+            $images = $this->imgRepository->findByParams($listParams);
+
             foreach ($images as $image) {
                 $imageViewModels[] = $this->createViewModel($image, 200, 200);
             }
         }
         return $imageViewModels;
+    }
+
+    public function countImagesList($search) {
+        return $this->imgRepository->count($search);
     }
 
     /**
@@ -105,6 +128,7 @@ class Image
         }
         return $votesSum;
     }
+
 
     /**
      * @param UploadedFile $file

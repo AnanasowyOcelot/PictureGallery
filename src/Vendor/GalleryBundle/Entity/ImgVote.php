@@ -22,7 +22,7 @@ class ImgVote
      * Image of this vote
      *
      * @var Img
-     * @ORM\ManyToOne(targetEntity="Vendor\GalleryBundle\Entity\Img")
+     * @ORM\ManyToOne(targetEntity="Vendor\GalleryBundle\Entity\Img", inversedBy="votes")
      */
     protected $img;
 

@@ -1,15 +1,15 @@
 
 services:
     vendor_gallery.image_repository:
-        class: Doctrine\Common\Persistence\ObjectRepository
         factory_service: doctrine.orm.default_entity_manager
         factory_method:  getRepository
+        class: Vendor\GalleryBundle\Repository\ImgRepository
         arguments:
             - "Vendor\GalleryBundle\Entity\Img"
     vendor_gallery.votes_repository:
-        class: Doctrine\Common\Persistence\ObjectRepository
         factory_service: doctrine.orm.default_entity_manager
         factory_method:  getRepository
+        class: Doctrine\Common\Persistence\ObjectRepository
         arguments:
             - "Vendor\GalleryBundle\Entity\ImgVote"
     vendor_galery.image_service:
@@ -19,6 +19,10 @@ services:
             - "@security.context"
             - "@vendor_gallery.votes_repository"
             - "@doctrine.orm.entity_manager"
+    vendor_galery.pagination_service:
+        class: Vendor\GalleryBundle\Service\Pagination
+        arguments:
+            - "@router"
     gedmo.listener.timestampable:
         class: Gedmo\Timestampable\TimestampableListener
         tags:
