@@ -23,10 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DefaultController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/DefaultController.php">
+      <file leaf-file-name="layout.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="819" selection-end="819" vertical-scroll-proportion="0.26877472" vertical-offset="357" max-vertical-offset="2346">
+            <state line="92" column="28" selection-start="4371" selection-end="4371" vertical-scroll-proportion="1.7391304" vertical-offset="684" max-vertical-offset="2057">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#5;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/public/css/bootstrap.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1605" column="18" selection-start="23971" selection-end="23971" vertical-scroll-proportion="0.0" vertical-offset="27091" max-vertical-offset="113407">
               <folding />
             </state>
           </provider>
@@ -35,16 +53,16 @@
       <file leaf-file-name="ListParams.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Model/ListParams.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="31" selection-start="2411" selection-end="2422" vertical-scroll-proportion="-54.26923" vertical-offset="867" max-vertical-offset="2465">
+            <state line="11" column="24" selection-start="116" selection-end="116" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="3366">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VoteController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/VoteController.php">
+      <file leaf-file-name="style2.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/bundles/vendorgallery/assets/css/style2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="25" selection-start="1477" selection-end="1532" vertical-scroll-proportion="-13.576923" vertical-offset="361" max-vertical-offset="1275">
+            <state line="36" column="30" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
@@ -53,25 +71,7 @@
       <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="54" selection-start="2106" selection-end="2106" vertical-scroll-proportion="-9.076923" vertical-offset="784" max-vertical-offset="4862">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImgRepository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Repository/ImgRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="51" selection-start="1304" selection-end="1304" vertical-scroll-proportion="-16.692308" vertical-offset="246" max-vertical-offset="867">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="71" selection-start="1507" selection-end="1507" vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="1666">
+            <state line="90" column="21" selection-start="2552" selection-end="2552" vertical-scroll-proportion="-7.1538463" vertical-offset="1157" max-vertical-offset="4862">
               <folding />
             </state>
           </provider>
@@ -87,11 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Vendor/UserBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/Vendor/UserBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vendor/UserBundle/Resources/views/Security/login.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vendor/UserBundle/UserBundle.php" />
-        <option value="$PROJECT_DIR$/../myproject/src/ForgottenCompanies/CrudBundle/Controller/AdminProductController.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/upload.html.twig" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/config/parameters.yml" />
@@ -106,7 +101,6 @@
         <option value="$PROJECT_DIR$/src/Vendor/CommentBundle/Resources/views/Thread/comment_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Vendor/CommentBundle/Resources/views/Thread/comment_new_content.html.twig" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Entity/Thread.php" />
         <option value="$PROJECT_DIR$/web/js/35a8e64.js" />
         <option value="$PROJECT_DIR$/web/js/35a8e64_comments_1.js" />
@@ -132,12 +126,18 @@
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Command/AddImagesCommand.php" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/VoteController.php" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Command/AddVotesSumToImagesCommand.php" />
-        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Pagination.php" />
-        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Model/ListParams.php" />
-        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Image.php" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Repository/ImgRepository.php" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/search.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/SearchController.php" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Search/search.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Pagination.php" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Image.php" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Model/ListParams.php" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/public/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/web/bundles/vendorgallery/assets/css/style2.css" />
       </list>
     </option>
   </component>
@@ -174,7 +174,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -203,7 +202,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -217,41 +216,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="doctrine" />
+              <option name="myItemId" value="bundles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="orm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pictureGallery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pictureGallery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doctrine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="vendorgallery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -265,27 +238,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="doctrine" />
+              <option name="myItemId" value="bundles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="orm" />
+              <option name="myItemId" value="vendorgallery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Doctrine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ORM" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -299,11 +264,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="doctrine" />
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendorgallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pictureGallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pictureGallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -409,11 +404,71 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pictureGallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pictureGallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GalleryBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pictureGallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pictureGallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GalleryBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Search" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -499,7 +554,63 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pictureGallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pictureGallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GalleryBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pictureGallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pictureGallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GalleryBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -557,6 +668,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -577,6 +689,7 @@
       <recent name="C:\xampp\htdocs\pictureGallery\src\Vendor\CommentBundle\Resources\views\Thread" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\pictureGallery\src\Vendor\GalleryBundle\Resources\views\Search" />
       <recent name="C:\xampp\htdocs\pictureGallery\src\Vendor\GalleryBundle" />
       <recent name="C:\xampp\htdocs\pictureGallery\src\Vendor\UserBundle\Resources" />
       <recent name="C:\xampp\htdocs\pictureGallery\src\Vendor" />
@@ -618,7 +731,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19789983" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22374798" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -650,9 +763,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22294022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -672,56 +785,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/35a8e64_comments_1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1822" selection-end="1822" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="9248" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/CommentBundle/CommentBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="323" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Resources/config/validation.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="23" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0" vertical-offset="433" max-vertical-offset="1207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Resources/assets/js/comments.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="267" column="44" selection-start="10546" selection-end="10546" vertical-scroll-proportion="-0.2236842" vertical-offset="4539" max-vertical-offset="9197" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/Vote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="5" selection-start="1595" selection-end="1595" vertical-scroll-proportion="-0.2947977" vertical-offset="1530" max-vertical-offset="2261" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/VoteInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="7" selection-start="901" selection-end="901" vertical-scroll-proportion="0.41811174" vertical-offset="378" max-vertical-offset="918" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="545" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Entity/Comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="1" selection-start="514" selection-end="514" vertical-scroll-proportion="-1.4739884" vertical-offset="1071" max-vertical-offset="1785" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/SecurityContextInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="41" selection-start="248" selection-end="279" vertical-scroll-proportion="-0.05154639" vertical-offset="93" max-vertical-offset="833" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/SecurityContext.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="40" selection-start="916" selection-end="916" vertical-scroll-proportion="0.35051546" vertical-offset="102" max-vertical-offset="1377" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/ViewModel/Image.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="5" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0" vertical-offset="1320" max-vertical-offset="1870" />
@@ -829,9 +892,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/Pagination/Paginator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="17" selection-start="4092" selection-end="4092" vertical-scroll-proportion="-27.423077" vertical-offset="1327" max-vertical-offset="4063">
-          <folding />
-        </state>
+        <state line="139" column="17" selection-start="4092" selection-end="4092" vertical-scroll-proportion="-27.423077" vertical-offset="1327" max-vertical-offset="4063" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/config/services.yml">
@@ -839,28 +900,14 @@
         <state line="24" column="23" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="646" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="57" selection-start="3152" selection-end="3175" vertical-scroll-proportion="0.24505928" vertical-offset="998" max-vertical-offset="2142" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="628" selection-end="628" vertical-scroll-proportion="0.49908257" vertical-offset="0" max-vertical-offset="545" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Entity/ImgVote.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="1" selection-start="676" selection-end="725" vertical-scroll-proportion="0.7533719" vertical-offset="204" max-vertical-offset="1496">
-          <folding />
-        </state>
+        <state line="36" column="1" selection-start="676" selection-end="725" vertical-scroll-proportion="0.7533719" vertical-offset="204" max-vertical-offset="1496" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Entity/ImgThumbnail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="73" selection-end="73" vertical-scroll-proportion="1.3076923" vertical-offset="102" max-vertical-offset="1683">
-          <folding />
-        </state>
+        <state line="4" column="26" selection-start="73" selection-end="73" vertical-scroll-proportion="1.3076923" vertical-offset="102" max-vertical-offset="1683" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Entity/Vote.php">
@@ -870,96 +917,163 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="7" selection-start="4889" selection-end="4889" vertical-scroll-proportion="0.61857706" vertical-offset="1948" max-vertical-offset="4913">
-          <folding />
-        </state>
+        <state line="156" column="7" selection-start="4889" selection-end="4889" vertical-scroll-proportion="0.61857706" vertical-offset="1948" max-vertical-offset="4913" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Entity/VotesSum.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="388" selection-end="388" vertical-scroll-proportion="0.27938342" vertical-offset="178" max-vertical-offset="1105">
-          <folding>
-            <element signature="e#48#86#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Entity/Img.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="17" selection-start="2261" selection-end="2261" vertical-scroll-proportion="-7.8461537" vertical-offset="1581" max-vertical-offset="4335">
-          <folding>
-            <element signature="e#47#85#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="19" column="21" selection-start="388" selection-end="388" vertical-scroll-proportion="0.27938342" vertical-offset="178" max-vertical-offset="1105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/QueryBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="808" column="53" selection-start="23687" selection-end="23687" vertical-scroll-proportion="0.33596838" vertical-offset="13226" max-vertical-offset="21811">
-          <folding />
-        </state>
+        <state line="808" column="53" selection-start="23687" selection-end="23687" vertical-scroll-proportion="0.33596838" vertical-offset="13226" max-vertical-offset="21811" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Command/AddImagesCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="5" selection-start="2773" selection-end="2773" vertical-scroll-proportion="1.7360308" vertical-offset="561" max-vertical-offset="1819" />
+        <state line="29" column="55" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.68978804" vertical-offset="135" max-vertical-offset="1819" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Entity/Img.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="23" selection-start="1276" selection-end="1276" vertical-scroll-proportion="-7.8461537" vertical-offset="765" max-vertical-offset="4335" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Command/AddVotesSumToImagesCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="38" selection-start="449" selection-end="464" vertical-scroll-proportion="0.14836223" vertical-offset="178" max-vertical-offset="697">
-          <folding />
-        </state>
+        <state line="28" column="38" selection-start="650" selection-end="650" vertical-scroll-proportion="-11.769231" vertical-offset="51" max-vertical-offset="697" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Pagination.php">
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="146" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.6304348" vertical-offset="310" max-vertical-offset="816">
-          <folding>
-            <element signature="e#129#167#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="71" selection-start="1507" selection-end="1507" vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="1666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Model/ListParams.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="31" selection-start="2411" selection-end="2422" vertical-scroll-proportion="-54.26923" vertical-offset="867" max-vertical-offset="2465">
-          <folding />
-        </state>
+        <state line="16" column="20" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Repository/ImgRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="51" selection-start="1304" selection-end="1304" vertical-scroll-proportion="-16.692308" vertical-offset="246" max-vertical-offset="867">
-          <folding />
-        </state>
+        <state line="69" column="0" selection-start="2413" selection-end="2413" vertical-scroll-proportion="2.3134022" vertical-offset="0" max-vertical-offset="1343" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Image.php">
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/upload.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="54" selection-start="2106" selection-end="2106" vertical-scroll-proportion="-9.076923" vertical-offset="784" max-vertical-offset="4862">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/VoteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="25" selection-start="1477" selection-end="1532" vertical-scroll-proportion="-13.576923" vertical-offset="361" max-vertical-offset="1275">
+        <state line="47" column="25" selection-start="1477" selection-end="1532" vertical-scroll-proportion="-0.10869565" vertical-offset="769" max-vertical-offset="1275" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="4" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="374">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="819" selection-end="819" vertical-scroll-proportion="0.26877472" vertical-offset="357" max-vertical-offset="2346">
+        <state line="3" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="-0.40316206" vertical-offset="255" max-vertical-offset="2278" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="46" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="901">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/public/assets/bootstrap/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="0" selection-start="3015" selection-end="3015" vertical-scroll-proportion="0.33270678" vertical-offset="673" max-vertical-offset="12291">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/vendorgallery/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="279" column="0" selection-start="5614" selection-end="5903" vertical-scroll-proportion="0.5263158" vertical-offset="4463" max-vertical-offset="19499">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Model/ListParams.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="24" selection-start="116" selection-end="116" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="3366">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="21" selection-start="2552" selection-end="2552" vertical-scroll-proportion="-7.1538463" vertical-offset="1157" max-vertical-offset="4862">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Search/search.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/public/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="0" selection-start="2931" selection-end="2931" vertical-scroll-proportion="0.33268103" vertical-offset="2363" max-vertical-offset="19499">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/public/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1605" column="18" selection-start="23971" selection-end="23971" vertical-scroll-proportion="0.0" vertical-offset="27091" max-vertical-offset="113407">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/vendorgallery/assets/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="457" column="0" selection-start="8455" selection-end="8455" vertical-scroll-proportion="0.0" vertical-offset="7592" max-vertical-offset="94503">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/sectional.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="21" selection-start="692" selection-end="692" vertical-scroll-proportion="0.33270678" vertical-offset="282" max-vertical-offset="3009">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="75" selection-start="1829" selection-end="1829" vertical-scroll-proportion="0.6640316" vertical-offset="395" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/vendorgallery/assets/css/style2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="30" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="28" selection-start="4371" selection-end="4371" vertical-scroll-proportion="1.7391304" vertical-offset="684" max-vertical-offset="2057">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#5;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

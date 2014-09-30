@@ -8,12 +8,12 @@
     <meta name="author" content="">
     <!-- CSS -->
     {% stylesheets '@FOSCommentBundle/Resources/assets/css/comments.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
     {% endstylesheets %}
     {% block stylesheets %}
 
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>        <!-- CSS -->
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <link rel="stylesheet" href="{{ asset('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400') }}">
         <link rel="stylesheet" href="{{ asset('http://fonts.googleapis.com/css?family=Droid+Sans') }}">
         <link rel="stylesheet" href="{{ asset('http://fonts.googleapis.com/css?family=Lobster') }}">
@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="{{ asset('/bundles/vendorgallery/assets/css/flexslider.css') }}">
         <link rel="stylesheet" href="{{ asset('/bundles/vendorgallery/assets/css/font-awesome.css') }}">
         <link rel="stylesheet" href="{{ asset('/bundles/vendorgallery/assets/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('/bundles/vendorgallery/assets/css/style2.css') }}">
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -40,6 +41,9 @@
               href="{{ asset('/bundles/vendorgallery/assets/ico/apple-touch-icon-72-precomposed.png') }}">
         <link rel="apple-touch-icon-precomposed"
               href="{{ asset('/bundles/vendorgallery/assets/ico/apple-touch-icon-57-precomposed.png') }}">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     {% endblock %}
 </head>
 <body>
@@ -47,64 +51,55 @@
 
 <!-- Site Description -->
 <div class="presentation container">
-    <h2>Jakaś nazwa <span class="violet">Galerii</span>... z obrazkami</h2>
+    <div style="float: left; overflow: hidden"><h2>Demo<span class="violet">kopia</span>tory</h2></div>
+    <ul style="overflow: hidden">
 
-    <p>A to jest menu:</p>
+
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            <li style="float: right">
+                <a class="menuLink" href="{{ path('fos_user_profile_edit') }}">Edit profile</a>
+            </li>
+            <li style="float: right">
+                <a class="menuLink" href="{{ path('fos_user_security_logout') }}">Log out</a>
+            </li>
+            <li style="float: right">
+                <a class="menuLink" href="{{ path('vendor_gallery_user_pictures', {'userId':app.user.id}) }}">My
+                    pictures</a>
+            </li>
+            <li style="float: right">
+                <a class="menuLink" href="{{ path('vendor_gallery_upload') }}">Upload</a>
+            </li>
+        {% else %}
+            <
+            <li style="float: right">
+                <a class="menuLink" href="{{ path('fos_user_registration_register') }}">Register</a>
+            </li>li style="float: right">
+            <a class="menuLink" href="{{ path('fos_user_security_login') }}">Login</a>
+            </li>
+        {% endif %}
+        <li style="float: right">
+
+            <a class="menuLink" href="{{ path('vendor_gallery_homepage') }}">Strona główna</a>
+        </li>
+
+    </ul>
+
 </div>
 
 
 <div class="navbar">
-    <div class="navbar-inner">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
-
-        <ul class="nav pull-left">
-            <li class="current-page">
-
-                <a href="{{ path('vendor_gallery_homepage') }}"><i class="icon-home"></i><br/>Strona główna</a>
-            </li>
 
 
-            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                <li>
-                    <a href="{{ path('vendor_gallery_upload') }}"><i class="icon-camera"></i><br/>Upload</a>
-                </li>
-                <li>
-                    <a href="{{ path('fos_user_security_logout') }}"><i class="icon-camera"></i><br/>Log out</a>
-                </li>
-                <li>
-                    <a href="{{ path('fos_user_profile_edit') }}"><i class="icon-camera"></i><br/>Edit profile</a>
-                </li>
-                <li>
-                    <a href="{{ path('vendor_gallery_user_pictures', {'userId':app.user.id}) }}"><i class="icon-camera"></i><br/>My pictures</a>
-                </li>
-            {% else %}
-                <li>
-                    <a href="{{ path('fos_user_security_login') }}"><i class="icon-camera"></i><br/>Login</a>
-                </li>
-                <li>
-                    <a href="{{ path('fos_user_registration_register') }}"><i class="icon-camera"></i><br/>Register</a>
-                </li>
-            {% endif %}
-
-
-
-        </ul>
-
-
-        <ul class="nav pull-right">
-            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                Zalogowano użytkownika: <b>{{ app.user.username }}</b>
-            {% else %}
-                Nie zalogowano.
-            {% endif %}
-        </ul>
-
+    <div class="accountInfo">
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            Zalogowano użytkownika:
+            <b>{{ app.user.username }}</b>
+        {% else %}
+            Nie zalogowano.
+        {% endif %}
     </div>
 </div>
+
 
 {% for message in messages %}
     <div>

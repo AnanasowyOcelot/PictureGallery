@@ -72,14 +72,14 @@ class Image
             $images = $this->imgRepository->findByParams($listParams);
 
             foreach ($images as $image) {
-                $imageViewModels[] = $this->createViewModel($image, 200, 200);
+                $imageViewModels[] = $this->createViewModel($image);
             }
         }
         return $imageViewModels;
     }
 
-    public function countImagesList($search) {
-        return $this->imgRepository->count($search);
+    public function countImagesList($listParams) {
+        return $this->imgRepository->count($listParams);
     }
 
     /**
@@ -113,7 +113,7 @@ class Image
         $images = $this->imgRepository->findBy(array('createdBy' => $userId));
         $imageViewModels = array();
         foreach ($images as $image) {
-            $imageViewModels[] = $this->createViewModel($image, 200, 200);
+            $imageViewModels[] = $this->createViewModel($image);
         }
         return $imageViewModels;
     }

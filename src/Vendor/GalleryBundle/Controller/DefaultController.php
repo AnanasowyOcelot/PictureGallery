@@ -12,7 +12,6 @@ class DefaultController extends Controller
 {
     public function searchAction()
     {
-
         /** @var $request Request */
         $request = $this->get('request');
         $data = $request->request->all();
@@ -23,19 +22,17 @@ class DefaultController extends Controller
         $url = $this->generateUrl('vendor_gallery_list', array('params' => $listParameters->toUrlString()));
 
         return $this->redirect($url);
-
     }
 
     public function indexAction($params = null)
     {
-
         $listParams = ListParams::fromString($params);
 
-        $count = $this->getImageService()->countImagesList($listParams->getSearch());
-        $images = $this->getImageService()->getImagesList($listParams);
+        $imgService = $this->getImageService();
+        $count = $imgService->countImagesList($listParams);
+        $images = $imgService->getImagesList($listParams);
 
-        $pageCount = $this->getPaginationService()->getPageCount($count, $listParams->getPerPage());
-        $paginationHtml = $this->getPaginationService()->createPagination($pageCount, $listParams->getPage(), $listParams);
+        $paginationHtml = $this->getPaginationService()->createPagination($count, $listParams);
 
         return $this->render('VendorGalleryBundle:Default:index.html.twig', array(
             'messages' => array(),
@@ -105,7 +102,6 @@ class DefaultController extends Controller
             'image' => $image,
             'messages' => array()
         ));
-
     }
 
     public function myImagesAction($userId)
