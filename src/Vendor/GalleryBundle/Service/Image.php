@@ -79,7 +79,12 @@ class Image
     }
 
     public function countImagesList($listParams) {
-        return $this->imgRepository->count($listParams);
+        if ($this->securityContext->isGranted('IS_AUTHENTICATED_FULLY')) {
+            return $this->imgRepository->count($listParams);
+        }else{
+            return 0;
+        }
+
     }
 
     /**

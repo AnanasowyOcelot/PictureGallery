@@ -9,9 +9,15 @@
 {% block content %}
 
     <div class="portfolio container">
-
-        {#{{ render(controller("VendorGalleryBundle:Search:searchBlock", { 'searchParams': searchParams })) }}#}
-
+        <a class="menuLink" onclick="$('#dialog').dialog('open')">Szukaj</a>
+        <div id="dialog" title="Szukaj">
+            {{ render(controller("VendorGalleryBundle:Search:searchBlock", { 'searchParams': searchParams })) }}
+        </div>
+        <script>
+            $( "#dialog" ).dialog({ autoOpen: false });
+            $( "#dialog" ).dialog( "option", "resizable", false );
+            $( "#dialog" ).dialog( "option", "draggable", false );
+        </script>
 
         {% for image in images %}
             <div class="workMiddle">

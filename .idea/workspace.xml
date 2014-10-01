@@ -23,55 +23,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.html.twig" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/layout.html.twig">
+      <file leaf-file-name="Pagination.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Pagination.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="28" selection-start="4371" selection-end="4371" vertical-scroll-proportion="1.7391304" vertical-offset="684" max-vertical-offset="2057">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#5;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.min.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/public/css/bootstrap.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1605" column="18" selection-start="23971" selection-end="23971" vertical-scroll-proportion="0.0" vertical-offset="27091" max-vertical-offset="113407">
+            <state line="37" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="-8.423077" vertical-offset="308" max-vertical-offset="833">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListParams.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Model/ListParams.php">
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="24" selection-start="116" selection-end="116" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="3366">
+            <state line="36" column="74" selection-start="1199" selection-end="1199" vertical-scroll-proportion="-9.153846" vertical-offset="289" max-vertical-offset="2329">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style2.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/bundles/vendorgallery/assets/css/style2.css">
+      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="30" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+            <state line="18" column="28" selection-start="572" selection-end="572" vertical-scroll-proportion="-9.807693" vertical-offset="51" max-vertical-offset="1360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Image.php">
+      <file leaf-file-name="Collection.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Collection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="21" selection-start="2552" selection-end="2552" vertical-scroll-proportion="-7.1538463" vertical-offset="1157" max-vertical-offset="4862">
+            <state line="43" column="0" selection-start="803" selection-end="803" vertical-scroll-proportion="0.4431599" vertical-offset="501" max-vertical-offset="1394">
               <folding />
             </state>
           </provider>
@@ -87,7 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/upload.html.twig" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/config/parameters.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
@@ -127,17 +108,18 @@
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/VoteController.php" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Command/AddVotesSumToImagesCommand.php" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Repository/ImgRepository.php" />
-        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/search.html.twig" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/SearchController.php" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Search/search.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Pagination.php" />
-        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Image.php" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Model/ListParams.php" />
         <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/public/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/web/bundles/vendorgallery/assets/css/style2.css" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Pagination.php" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Image.php" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Collection.php" />
       </list>
     </option>
   </component>
@@ -174,6 +156,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -668,7 +651,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -726,24 +708,24 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34500876" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22374798" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.226979" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34500876" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -763,9 +745,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22294022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -785,21 +767,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/ViewModel/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="5" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0" vertical-offset="1320" max-vertical-offset="1870" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/myimages.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="38" selection-start="707" selection-end="707" vertical-scroll-proportion="-12.423077" vertical-offset="17" max-vertical-offset="714" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="175" selection-end="175" vertical-scroll-proportion="0.37431192" vertical-offset="0" max-vertical-offset="545" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/File/Exception/UnexpectedTypeException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="511" />
@@ -950,11 +917,6 @@
         <state line="16" column="20" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Repository/ImgRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2413" selection-end="2413" vertical-scroll-proportion="2.3134022" vertical-offset="0" max-vertical-offset="1343" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/upload.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646" />
@@ -967,89 +929,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/SearchController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="-0.40316206" vertical-offset="255" max-vertical-offset="2278" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Pagination.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="46" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="901">
-          <folding />
-        </state>
+        <state line="4" column="4" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="374" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/public/assets/bootstrap/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="3015" selection-end="3015" vertical-scroll-proportion="0.33270678" vertical-offset="673" max-vertical-offset="12291">
-          <folding />
-        </state>
+        <state line="50" column="0" selection-start="3015" selection-end="3015" vertical-scroll-proportion="0.33270678" vertical-offset="673" max-vertical-offset="12291" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/bundles/vendorgallery/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="0" selection-start="5614" selection-end="5903" vertical-scroll-proportion="0.5263158" vertical-offset="4463" max-vertical-offset="19499">
-          <folding />
-        </state>
+        <state line="279" column="0" selection-start="5614" selection-end="5903" vertical-scroll-proportion="0.5263158" vertical-offset="4463" max-vertical-offset="19499" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Model/ListParams.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="24" selection-start="116" selection-end="116" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="3366">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="21" selection-start="2552" selection-end="2552" vertical-scroll-proportion="-7.1538463" vertical-offset="1157" max-vertical-offset="4862">
+        <state line="11" column="24" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="3366">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Search/search.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/public/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="0" selection-start="2931" selection-end="2931" vertical-scroll-proportion="0.33268103" vertical-offset="2363" max-vertical-offset="19499">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/public/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1605" column="18" selection-start="23971" selection-end="23971" vertical-scroll-proportion="0.0" vertical-offset="27091" max-vertical-offset="113407">
-          <folding />
-        </state>
+        <state line="149" column="0" selection-start="2931" selection-end="2931" vertical-scroll-proportion="0.33268103" vertical-offset="2363" max-vertical-offset="19499" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/bundles/vendorgallery/assets/bootstrap/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="457" column="0" selection-start="8455" selection-end="8455" vertical-scroll-proportion="0.0" vertical-offset="7592" max-vertical-offset="94503">
-          <folding />
-        </state>
+        <state line="457" column="0" selection-start="8455" selection-end="8455" vertical-scroll-proportion="0.0" vertical-offset="7592" max-vertical-offset="94503" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/sectional.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="21" selection-start="692" selection-end="692" vertical-scroll-proportion="0.33270678" vertical-offset="282" max-vertical-offset="3009">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="75" selection-start="1829" selection-end="1829" vertical-scroll-proportion="0.6640316" vertical-offset="395" max-vertical-offset="1258">
           <folding />
         </state>
       </provider>
@@ -1061,19 +978,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/public/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1605" column="18" selection-start="23971" selection-end="23971" vertical-scroll-proportion="0.36466166" vertical-offset="27091" max-vertical-offset="113407">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Repository/ImgRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="20" selection-start="317" selection-end="317" vertical-scroll-proportion="0.23517786" vertical-offset="51" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="21" selection-start="2522" selection-end="2522" vertical-scroll-proportion="-13.346154" vertical-offset="894" max-vertical-offset="4947">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/JaVa/Gry/fmp_mf_wartosc_obligacji/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="62" selection-start="495" selection-end="1979" vertical-scroll-proportion="-19.307692" vertical-offset="195" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/JaVa/Gry/fmp_mf_wartosc_obligacji/plansza_wpisywanie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="35" selection-start="4103" selection-end="4130" vertical-scroll-proportion="-7.1153846" vertical-offset="1787" max-vertical-offset="2533">
+          <folding>
+            <marker date="1411646570232" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1411646570232" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="28" selection-start="4371" selection-end="4371" vertical-scroll-proportion="1.7391304" vertical-offset="684" max-vertical-offset="2057">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#5;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="59" column="35" selection-start="3220" selection-end="3239" vertical-scroll-proportion="0.47035572" vertical-offset="765" max-vertical-offset="2074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="-8.423077" vertical-offset="308" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="28" selection-start="572" selection-end="572" vertical-scroll-proportion="-9.807693" vertical-offset="51" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="74" selection-start="1199" selection-end="1199" vertical-scroll-proportion="-9.153846" vertical-offset="289" max-vertical-offset="2329">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vendor/GalleryBundle/Service/Collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="803" selection-end="803" vertical-scroll-proportion="0.4431599" vertical-offset="501" max-vertical-offset="1394">
+          <folding />
         </state>
       </provider>
     </entry>

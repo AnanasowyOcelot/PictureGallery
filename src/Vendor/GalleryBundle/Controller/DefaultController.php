@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Vendor\GalleryBundle\Entity\Img;
 use Vendor\GalleryBundle\Exception\FileUploadException;
 use Vendor\GalleryBundle\Model\ListParams;
+use Vendor\GalleryBundle\Service\Collection;
 
 class DefaultController extends Controller
 {
@@ -31,12 +32,15 @@ class DefaultController extends Controller
         $imgService = $this->getImageService();
         $count = $imgService->countImagesList($listParams);
         $images = $imgService->getImagesList($listParams);
-
         $paginationHtml = $this->getPaginationService()->createPagination($count, $listParams);
+
+        $collection = new Collection('Vendor\GalleryBundle\ViewModel\Image');
+        $collection[0] = $images[0];
+        $collection[1] = $images[1];
 
         return $this->render('VendorGalleryBundle:Default:index.html.twig', array(
             'messages' => array(),
-            'images' => $images,
+            'images' => $collection,
             'pagination' => $paginationHtml,
             'searchParams' => $listParams
         ));
