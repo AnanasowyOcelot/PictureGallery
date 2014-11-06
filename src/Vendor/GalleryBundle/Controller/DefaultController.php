@@ -34,13 +34,10 @@ class DefaultController extends Controller
         $images = $imgService->getImagesList($listParams);
         $paginationHtml = $this->getPaginationService()->createPagination($count, $listParams);
 
-        $collection = new Collection('Vendor\GalleryBundle\ViewModel\Image');
-        $collection[0] = $images[0];
-        $collection[1] = $images[1];
 
         return $this->render('VendorGalleryBundle:Default:index.html.twig', array(
             'messages' => array(),
-            'images' => $collection,
+            'images' => $images,
             'pagination' => $paginationHtml,
             'searchParams' => $listParams
         ));
