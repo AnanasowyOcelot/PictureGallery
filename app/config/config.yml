@@ -1,7 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-
+    - { resource: @VendorGalleryBundle/Resources/config/admin.yml }
 framework:
     #esi:             ~
     translator: { fallback: en }
@@ -112,3 +112,14 @@ fos_comment:
 #                view: IS_AUTHENTICATED_ANONYMOUSLY
 #                edit: ROLE_ADMIN
 #                delete: ROLE_ADMIN
+######################################################
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        # Enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+
+sonata_admin:
+    title:      Acme Demo Bundle
+    title_logo: bundles/acmedemo/img/fancy_acme_logo.png
