@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0d9d60ebc5a0f44f6b20a1f997c7255f",
+    "hash": "965484cc5d7d82c9583b2f2425be6291",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -1369,7 +1369,7 @@
         },
         {
             "name": "knplabs/knp-menu-bundle",
-            "version": "v2.0.0",
+            "version": "dev-master",
             "target-dir": "Knp/Bundle/MenuBundle",
             "source": {
                 "type": "git",
@@ -2918,7 +2918,8 @@
         "friendsofsymfony/comment-bundle": 20,
         "sonata-project/admin-bundle": 20,
         "sonata-project/doctrine-orm-admin-bundle": 20,
-        "sonata-project/core-bundle": 20
+        "sonata-project/core-bundle": 20,
+        "knplabs/knp-menu-bundle": 20
     },
     "prefer-stable": false,
     "platform": {

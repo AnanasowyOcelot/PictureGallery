@@ -26,8 +26,6 @@ class AppKernel extends Kernel
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle($this),
 
-
-
             // Add your dependencies
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
@@ -35,7 +33,8 @@ class AppKernel extends Kernel
             //...
 
             // Then add SonataAdminBundle
-            new Sonata\AdminBundle\SonataAdminBundle()
+            new Sonata\AdminBundle\SonataAdminBundle(),
+            new Vendor\AdminBundle\VendorAdminBundle()
         );
 
 

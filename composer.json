@@ -26,7 +26,8 @@
         "friendsofsymfony/comment-bundle": "2.0.*@dev",
         "sonata-project/admin-bundle": "2.4.*@dev",
         "sonata-project/doctrine-orm-admin-bundle": "2.3.*@dev",
-        "sonata-project/core-bundle": "2.3.*@dev"
+        "sonata-project/core-bundle": "2.3.*@dev",
+        "knplabs/knp-menu-bundle": "2.0.*@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

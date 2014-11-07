@@ -121,5 +121,7 @@ sonata_block:
             contexts:   [admin]
 
 sonata_admin:
-    title:      Acme Demo Bundle
-    title_logo: bundles/acmedemo/img/fancy_acme_logo.png
+    title:      Panel Kontroli Świata
+#    title_logo: bundles/acmedemo/img/fancy_acme_logo.png
+    templates:
+        layout:  VendorAdminBundle::standard_layout.html.twig
